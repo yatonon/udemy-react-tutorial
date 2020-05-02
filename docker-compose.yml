@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+    web:
+        container_name: react-tutorial
+        image: web_react_tutorial
+        build:
+          context: ./
+          dockerfile: ./docker/web/Dockerfile
+        tty: true
+        ports:
+            - 3001:3000
+        volumes:
+            - ./src:/app/src
+        working_dir: /app
+        restart: always
