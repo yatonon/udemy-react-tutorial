@@ -5,9 +5,9 @@ const initialState = {value : 0}
 export default (state = initialState, action ) => {
     switch (action.type) {
         case INCREMENT:
-            return {vslue : state.value + 1}
+            return {value : state.value + 1}
         case DECREMENT:
-            return {vslue : state.value - 1}
+            return {value : state.value - 1}
 
         default: return state
     }
